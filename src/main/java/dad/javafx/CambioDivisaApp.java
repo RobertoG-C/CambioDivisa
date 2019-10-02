@@ -66,8 +66,6 @@ public class CambioDivisaApp extends Application {
 
 		try {
 			Double cantidad = Double.parseDouble(cifraText.getText());
-
-			cantidad = destino.fromEuro(origen.toEuro(cantidad));
 			convertidoText.setText(String.format("%.2f", Divisa.fromTo(origen, destino, cantidad)));
 
 		} catch (NumberFormatException error) {
